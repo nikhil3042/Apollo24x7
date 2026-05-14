@@ -24,4 +24,6 @@ Login With Mobile Number
     Input Text  ${mob}  ${USER_EMAIL}
     Wait Until Element Is Visible    ${go_to_otp}    10s
     Click Button  ${go_to_otp}
-    Sleep    30s
+    Sleep    20s
+    Click Button  ${verify}
+    Sleep    15s

@@ -1,4 +1,5 @@
 *** Variables ***
-${login_button}  xpath=//li[@class="HeaderContent_nav___z_IP"]/div
-${mob}  xpath=//input[@class="newLogin_input__Jviae"]
-${go_to_otp}  xpath=//button[@title="Login"]
+${login_button}  xpath=//div[@id="loginPopup"]
+${mob}  xpath=//input[@name="mobileNumber"]
+${go_to_otp}  xpath=//button[@class="SignIn_submitBtn__k9oGb"]
+${verify}  xpath=//button[@class="SignIn_submitBtn__k9oGb"]
