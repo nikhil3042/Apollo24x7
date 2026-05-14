@@ -17,4 +17,5 @@ Shadow Click Popup
     END
 
 Circle Membership
+    Wait Until Element Is Visible    ${membership_link}
     Click Element    ${membership_link}
