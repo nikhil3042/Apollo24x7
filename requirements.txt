@@ -4,5 +4,5 @@ robotframework-pabot==5.2.2
 robotframework-datadriver[XLS]==1.11.2
 selenium==4.24.0
 webdriver-manager==4.0.2
-python-dotenv==1.2.2
+python-dotenv==1.2.1
 PyYAML==6.0.3
