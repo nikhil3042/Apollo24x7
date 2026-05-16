@@ -1,6 +1,7 @@
 *** Settings ***
 Library  SeleniumLibrary
 Library  ../config/env_loader.py
+Library  env_loader
 
 *** Variables ***
 ${BROWSER}  chrome
