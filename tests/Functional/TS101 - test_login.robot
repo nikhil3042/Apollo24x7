@@ -1,6 +1,7 @@
 *** Settings ***
 Library  SeleniumLibrary
 Resource  ../../resource/pages/login_page.robot
+Resource  ../../locators/login_locator.robot
 Resource  ../../resource/common_resources.robot
 
 Suite Setup  Load Environment
