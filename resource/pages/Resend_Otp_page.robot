@@ -8,3 +8,5 @@ Resend OTP
     Click Element    ${Resend_OTP}
 
     Sleep    30s
+
+    Click Element    ${Verify_btn}
