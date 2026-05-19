@@ -1,7 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
-Resource  ../../locators/login_locator.robot
-Resource  ../common_resources.robot
+Resource  ../../locators/home_locators.robot
 
 *** Keywords ***
 Close Image Popup
@@ -16,13 +15,13 @@ Shadow Click Popup
         Execute Javascript
         ...    document.querySelector('ct-web-popup-imageonly').shadowRoot.querySelector('#close').click()
     END
+Click Left Arrow
+    [Documentation]  this keyword clicks left arrow
+    Wait Until Element Is Visible    ${left_arrow}
+    Click Element    ${left_arrow}
 
-Login With Mobile Number
-    Click Element    ${login_button}
-    Wait Until Page Contains Element    ${enter_number}
-    Input Text    ${enter_number}    ${USER_PHONE}
-    Wait Until Element Is Enabled    ${continue_button}
-    Click Element    ${continue_button}
-    Wait Until Element Is Enabled    ${verify_button}  timeout=30s
-    Click Element    ${verify_button}
-    Wait Until Page Contains Element    ${home_button}  timeout=10s
+Click Right Arrow
+    [Documentation]  this keyword click right arrow
+    Wait Until Element Is Visible    ${right_arrow}
+    Click Element    ${right_arrow}
+    
