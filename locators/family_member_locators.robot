@@ -13,3 +13,9 @@ ${confirmation_button}  xpath=//span[text()="CONFIRM"]
 ${ok_button}  xpath=//span[text()="OK"]
 ${cancel_button}  xpath=//span[text()="Cancel"]
 ${edit_profile}  xpath=//div[text()="Monika Agarwal"]
+
+
+
+
+
+

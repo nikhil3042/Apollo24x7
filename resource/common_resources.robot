@@ -1,23 +1,29 @@
 *** Settings ***
 Library  SeleniumLibrary
-Resource  ../../resource/pages/login_page.robot
-Resource  ../../resource/common_resources.robot
+Library  ../config/env_loader.py
 
-Suite Setup  Load Environment
-Test Setup  Open Application
-Test Teardown  Close Application
+*** Variables ***
+${BROWSER}  chrome
+${ENV}  qa
 
-*** Test Cases ***
-TC_F_001 - Login
-    Close Image Popup
-    Login With Mobile Number
+*** Keywords ***
+Load Environment
+    Load Env    ${ENV}  
+    ${url}=  Get Env    baseurl
+    ${phone_no}=  Get Env    ph_no
 
-TC_F_003 - Wrong OTP
-    Close Image Popup
-    Login With Mobile Number
-    Page Should Contain  Incorrect OTP
+    Set Global Variable    ${BASE_URL}  ${url}
+    Set Global Variable    ${USER_PHONE}  ${phone_no}
+    Log    Loaded BASE_URL=${BASE_URL}
 
-TC_F_004 - OTP Expired
-    Close Image Popup
-    Login With Mobile Number
-    sleep  10s
+Open Application
+    [Documentation]  Opens the application
+    Should Not Be Empty    ${BASE_URL}    Base URL must not be empty. Please set it in config/env.yaml
+    Open Browser  ${BASE_URL}  ${BROWSER}
+    Maximize Browser Window
+    Sleep    30
+
+
+Close Application
+    [Documentation]  Closing the application
+    Close All Browsers
