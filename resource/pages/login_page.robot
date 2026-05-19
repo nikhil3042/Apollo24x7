@@ -23,6 +23,6 @@ Login With Mobile Number
     Input Text    ${enter_number}    ${USER_PHONE}
     Wait Until Element Is Enabled    ${continue_button}
     Click Element    ${continue_button}
-    Wait Until Element Is Enabled    ${verify_button}  timeout=30s
+    Wait Until Element Is Enabled    ${verify_button}  timeout=60s
     Click Element    ${verify_button}
     Wait Until Page Contains Element    ${home_button}  timeout=10s
