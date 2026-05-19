@@ -1,8 +1,10 @@
 *** Settings ***
 Library  SeleniumLibrary
-Resource  ../../locators/home_locators.robot
-
 *** Keywords ***
+Login
+    Close Image Popup
+    Sleep    100s
+
 Close Image Popup
     Sleep    5s
     [Documentation]    Closes the shadow DOM popup using JS
@@ -15,13 +17,3 @@ Shadow Click Popup
         Execute Javascript
         ...    document.querySelector('ct-web-popup-imageonly').shadowRoot.querySelector('#close').click()
     END
-Click Left Arrow
-    [Documentation]  this keyword clicks left arrow
-    Wait Until Element Is Visible    ${left_arrow}
-    Click Element    ${left_arrow}
-
-Click Right Arrow
-    [Documentation]  this keyword click right arrow
-    Wait Until Element Is Visible    ${right_arrow}
-    Click Element    ${right_arrow}
-    

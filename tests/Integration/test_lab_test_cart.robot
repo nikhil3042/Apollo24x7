@@ -13,6 +13,7 @@ Test Teardown  Close Application
 Lab Test Cart
     Close Image Popup
     Login With Mobile Number
+    Sleep    2s
     Browse Lab Test
     Add Test To Cart
 

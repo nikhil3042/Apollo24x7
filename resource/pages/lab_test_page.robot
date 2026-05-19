@@ -7,7 +7,7 @@ Browse Lab Test
     [Documentation]    clicking lab test page
     Click Element    ${lab_test_page}
     Sleep    5s
-
+    
     Click Element    ${view_all_button}
     Sleep    2s
 
@@ -30,6 +30,7 @@ Add Test To Cart
     Wait Until Element Is Visible    ${test_name_in_cart}
     ${test_name_on_cart_page}  Get Text    ${test_name_in_cart}
     Should Be Equal    ${test_name_on_search_page}    ${test_name_on_cart_page}
+
 
 
 
