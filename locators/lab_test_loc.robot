@@ -5,3 +5,5 @@ ${filter}=  xpath=(//div[@class="WebFilter_subFilterContainer__jHlz9"])[2]/desce
 ${select_test}=  xpath=//div[@class="SingleTypeListing_listinBoxes__cpbU4"]/div[1]
 ${add_to_cart}=  xpath=(//div[@class="Rd Zd CustomToolTip_customToolTip__Y_T15 CustomToolTip_hideToolip__RSo9T"]/descendant::button)[1]
 ${cart_icon}=  xpath=//img[@alt="cart-icon"]
+${lab_test_name}  xpath=//div[@class="DetailsPageItemCard_productBasicInfo__wJddT"]/h1
+${test_name_in_cart}  xpath=//div[@class="GoToCartBannerNew_lhs__c1DvP"]/p
