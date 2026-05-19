@@ -1,6 +1,7 @@
 *** Settings ***
 Library  SeleniumLibrary
 Library  ../config/env_loader.py
+Library  env_loader
 
 *** Variables ***
 ${BROWSER}  chrome
@@ -19,6 +20,7 @@ Open Application
     [Documentation]  Opens the application
     Open Browser  ${BASE_URL}  ${BROWSER}
     Maximize Browser Window
+    Sleep    30
 
 Close Application
     [Documentation]  Closing the application
