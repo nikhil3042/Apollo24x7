@@ -7,15 +7,7 @@ Resource    ../common_resources.robot
 *** Keywords ***
 Click Buy Medicines
     Sleep    3s
-    Wait Until Element Is Visible    ${buy_medicines_nav}    timeout=15s
     Click Element                    ${buy_medicines_nav}
-    Sleep    3s
-
-
-
-
-Go Back To Home
-    Go Back
     Sleep    3s
 
 Click Category And Verify Redirect
@@ -25,7 +17,7 @@ Click Category And Verify Redirect
     Click Element                    ${locator}
     Sleep    3s
     Location Should Contain          ${expected_url}
-    Go Back To Home
+
 
 
 Click Apollo Products
@@ -53,6 +45,5 @@ Click Home Essentials
     Click Category And Verify Redirect    ${home_essentials}    home-essentials
 
 Click Shop By Category
-    # The site currently redirects shop-by-category links to paths like
-    # /shop-by-category/otc so assert the broader segment 'shop-by-category'
+
     Click Category And Verify Redirect    ${shop_by_category}    shop-by-category
