@@ -13,7 +13,7 @@ Load Environment
     ${phone_no}=  Get Env    ph_no
 
     Set Global Variable    ${BASE_URL}  ${url}
-    Set Global Variable    ${USER_EMAIL}  ${phone_no}
+    Set Global Variable    ${USER_PHONE}  ${phone_no}
     Log    Loaded BASE_URL=${BASE_URL}
 
 Open Application
