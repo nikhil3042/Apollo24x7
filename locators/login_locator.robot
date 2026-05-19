@@ -1,5 +1,6 @@
 *** Variables ***
-${login_button}  xpath=//div[@id="loginPopup"]
-${mob}  xpath=//input[@name="mobileNumber"]
-${go_to_otp}  xpath=//button[@class="SignIn_submitBtn__k9oGb"]
-${verify}  xpath=//button[@class="SignIn_submitBtn__k9oGb"]
+${login_button}  xpath=//span[contains(text(),"Login")]/following::span
+${enter_number}  xpath=//input[@name="mobileNumber"]
+${home_button}  xpath=//a[@title="Home"]
+${continue_button}  xpath=//button[contains(text(),"Continue")]
+${verify_button}  xpath=//button[contains(text(),"Verify")]

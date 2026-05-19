@@ -16,14 +16,13 @@ Shadow Click Popup
         Execute Javascript
         ...    document.querySelector('ct-web-popup-imageonly').shadowRoot.querySelector('#close').click()
     END
+
 Login With Mobile Number
-    Wait Until Element Is Visible    ${login_button}    10s
     Click Element    ${login_button}
-    Sleep    2s
-    Wait Until Element Is Visible    ${mob}    10s
-    Input Text  ${mob}  ${USER_EMAIL}
-    Wait Until Element Is Visible    ${go_to_otp}    10s
-    Click Button  ${go_to_otp}
-    Sleep    20s
-    Click Button  ${verify}
-    Sleep    15s
+    Wait Until Page Contains Element    ${enter_number}
+    Input Text    ${enter_number}    ${USER_PHONE}
+    Wait Until Element Is Enabled    ${continue_button}
+    Click Element    ${continue_button}
+    Wait Until Element Is Enabled    ${verify_button}  timeout=30s
+    Click Element    ${verify_button}
+    Wait Until Page Contains Element    ${home_button}  timeout=10s
