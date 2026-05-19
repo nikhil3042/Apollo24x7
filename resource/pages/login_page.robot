@@ -4,12 +4,12 @@ Resource  ../../locators/login_locator.robot
 Resource  ../common_resources.robot
 
 *** Keywords ***
-Close Image Popup
+Close Image Popup1
     Sleep    5s
     [Documentation]    Closes the shadow DOM popup using JS
     Wait Until Keyword Succeeds    10s    1s    Shadow Click Popup
 
-Shadow Click Popup
+Shadow Click Popup1
     ${is_visible}=    Execute Javascript
     ...    return document.querySelector('ct-web-popup-imageonly') !== null
     IF    ${is_visible}
