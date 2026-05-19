@@ -1,6 +1,7 @@
 *** Settings ***
 Resource  ../../resource/Pages/home_page.robot
 Resource  ../../resource/common_resources.robot
+Resource  ../../resource/pages/LOGIN_SUITE.resource
 
 Suite Setup  Load Environment
 Test Setup  Open Application
