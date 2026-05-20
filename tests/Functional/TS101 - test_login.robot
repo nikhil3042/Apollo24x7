@@ -17,7 +17,6 @@ TC_F_003 - Wrong OTP
     Close Image Popup
     Login With Mobile Number
     Page Should Contain  Incorrect OTP
-
 TC_F_004 - OTP Expired
     Close Image Popup
     Login With Mobile Number

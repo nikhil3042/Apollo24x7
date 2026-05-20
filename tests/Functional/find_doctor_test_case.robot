@@ -19,6 +19,3 @@ TC_02 Verify that user is able to book an appointment
     Navigate To Find Doctors Page
     Select Doctor By Speciality
     Book Appointment
-
-
-
