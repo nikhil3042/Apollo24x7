@@ -14,7 +14,7 @@ TC_F_021 Browse Lab Test
     [Documentation]    Navigate to lab test page and apply filter
     [Tags]    functional
 
-    Sleep    50s
+    Sleep    60s
     Browse Lab Test
 
 TC_F_022 Add Lab Test To Cart
