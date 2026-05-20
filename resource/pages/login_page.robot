@@ -18,9 +18,11 @@ Shadow Click Popup
     END
 
 Login With Mobile Number
+    Wait Until Element Is Visible    ${login_button}    5s
     Click Element    ${login_button}
+    Sleep    2s
     Wait Until Page Contains Element    ${enter_number}
-    Input Text    ${enter_number}    ${USER_PHONE}
+    Input Text    ${enter_number}    ${USER_EMAIL}
     Wait Until Element Is Enabled    ${continue_button}
     Click Element    ${continue_button}
     Wait Until Element Is Enabled    ${verify_button}  timeout=30s

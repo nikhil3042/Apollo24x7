@@ -11,9 +11,6 @@ Click Buy Medicines
     Click Element                    ${buy_medicines_nav}
     Sleep    3s
 
-
-
-
 Go Back To Home
     Go Back
     Sleep    3s

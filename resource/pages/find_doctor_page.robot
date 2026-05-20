@@ -18,5 +18,8 @@ Select Doctor By Speciality
 Book Appointment
     [Documentation]  Books an appointment with the selected doctor
     Click Element  ${book_appointment}
-    Wait Until Page Contains Element  ${book_appointment}  timeout=10s
+    Sleep    3s
+    #Wait Until Page Contains Element  ${book_appointment}
+    Click Button  ${confirm}
+    Sleep    5s
 
