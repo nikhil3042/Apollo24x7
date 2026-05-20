@@ -13,7 +13,10 @@ dist/
 build/
 .Python
 *.yaml
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0f5484e2901b4a4c65524c7042727d7eacdf426f
 # ================================
 # ROBOT FRAMEWORK REPORTS & LOGS
 # ================================
