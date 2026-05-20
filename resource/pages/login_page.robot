@@ -4,12 +4,12 @@ Resource  ../../locators/login_locator.robot
 Resource  ../common_resources.robot
 
 *** Keywords ***
-Close Image Popup
+Close Image Popup1
     Sleep    5s
     [Documentation]    Closes the shadow DOM popup using JS
     Wait Until Keyword Succeeds    10s    1s    Shadow Click Popup
 
-Shadow Click Popup
+Shadow Click Popup1
     ${is_visible}=    Execute Javascript
     ...    return document.querySelector('ct-web-popup-imageonly') !== null
     IF    ${is_visible}
@@ -17,13 +17,23 @@ Shadow Click Popup
         ...    document.querySelector('ct-web-popup-imageonly').shadowRoot.querySelector('#close').click()
     END
 Login With Mobile Number
-    Wait Until Element Is Visible    ${login_button}    10s
-    Click Element    ${login_button}
-    Sleep    2s
-    Wait Until Element Is Visible    ${mob}    10s
-    Input Text  ${mob}  ${USER_EMAIL}
-    Wait Until Element Is Visible    ${go_to_otp}    10s
-    Click Button  ${go_to_otp}
-    Sleep    20s
-    Click Button  ${verify}
+
     Sleep    15s
+
+    Execute Javascript    window.scrollTo(0,0)
+
+    Wait Until Element Is Visible    ${login_button}    20s
+
+    Execute Javascript    document.evaluate("//div[contains(@title,'Login')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();
+
+    Sleep    10s
+
+    Capture Page Screenshot
+
+    Page Should Contain Element    ${mob}
+
+    Input Text    ${mob}    ${USER_PHONE}
+
+    Click Button    ${go_to_otp}
+
+    Sleep    30s

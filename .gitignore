@@ -12,6 +12,7 @@ __pycache__/
 dist/
 build/
 .Python
+*.yaml
 
 # ================================
 # ROBOT FRAMEWORK REPORTS & LOGS
@@ -82,3 +83,5 @@ coverage.xml
 *.tmp
 *.temp
 ~$*
+.DS_Store
+config/env.yaml
