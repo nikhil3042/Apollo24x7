@@ -12,6 +12,7 @@ Test Teardown  Close Application
 
 *** Test Cases ***
 TC_I_007 - Lab Test Booking
+    [Documentation]    Verifies user can book lab test successfully
     [Tags]    Integration
 
     Close Image Popup
