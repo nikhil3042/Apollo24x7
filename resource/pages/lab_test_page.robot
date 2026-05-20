@@ -22,8 +22,16 @@ Add Test To Cart
     Click Element    ${add_to_cart}
     Sleep    2s
 
+    ${test_name_on_search_page}  Get Text    ${lab_test_name}
+
     Click Element    ${cart_icon}
     Sleep    2s
+
+    Wait Until Element Is Visible    ${test_name_in_cart}
+    ${test_name_on_cart_page}  Get Text    ${test_name_in_cart}
+    Should Be Equal    ${test_name_on_search_page}    ${test_name_on_cart_page}
+
+
 
 
 
