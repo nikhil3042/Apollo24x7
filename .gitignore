@@ -12,6 +12,7 @@ __pycache__/
 dist/
 build/
 .Python
+*.yaml
 
 # ================================
 # ROBOT FRAMEWORK REPORTS & LOGS
@@ -66,6 +67,7 @@ secrets.py
 config/config.local.yaml
 config/config.local.py
 config_local.py
+*.yaml
 
 # ================================
 # PYTEST / COVERAGE
@@ -74,7 +76,6 @@ config_local.py
 .coverage
 htmlcov/
 coverage.xml
-
 # ================================
 # LOGS & TEMP FILES
 # ================================
@@ -82,3 +83,5 @@ coverage.xml
 *.tmp
 *.temp
 ~$*
+.DS_Store
+config/env.yaml
