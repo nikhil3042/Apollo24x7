@@ -10,7 +10,7 @@ Navigate to Discount Page
     Click Element    ${Lab Tests Page}
     Sleep  20s2
     Click Element    ${cart_icon}
-    Click Element    ${Discount}
+#    Click Element    ${Discount}
     Sleep  5s
 
 
