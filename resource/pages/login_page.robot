@@ -17,7 +17,7 @@ Shadow Click Popup
         ...    document.querySelector('ct-web-popup-imageonly').shadowRoot.querySelector('#close').click()
     END
 Login With Mobile Number
-    Wait Until Element Is Visible    ${login_button}    10s
+    Wait Until Element Is Visible    ${login_button}    5s
     Click Element    ${login_button}
     Sleep    2s
     Wait Until Element Is Visible    ${mob}    10s

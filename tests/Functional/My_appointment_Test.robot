@@ -8,7 +8,7 @@ Test Setup      Open Application
 Test Teardown   Close Application
 
 *** Test Cases ***
-Verify My Appointment Page
+TC_F_020 Verify My Appointment Page
     [Documentation]    This test case verifies that the user can navigate to the My Appointment page
     [Tags]   Functional
     Sleep    40s
